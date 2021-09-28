@@ -2,14 +2,14 @@ version: "3.4"
 
 services:
   grpc-api:
-    image: ghcr.io/jjbrosnan/grpc-api-python-super-ai:${VERSION:-latest}
+    image: ghcr.io/jjbrosnan/grpc-api-super-ai:${VERSION:-latest}
     expose:
       - '8080'
     volumes:
       - ./data:/data
       - api-cache:/cache
     environment:
-      - JAVA_TOOL_OPTIONS=-Xmx8g -Ddeephaven.console.type=python
+      - JAVA_TOOL_OPTIONS=-Xmx12g -Ddeephaven.console.type=python
 
   web:
     image: ghcr.io/deephaven/web:${VERSION:-latest}
