@@ -39,4 +39,10 @@ services:
     image: <user>/<image_name>:${VERSION:-latest}
 ```
 
+Lastly, start up the containers:
+
+```bash
+docker-compose up
+```
+
 Once the packages on my personal GitHub page have been tested, I will update the docker-compose.yml files to use them.
